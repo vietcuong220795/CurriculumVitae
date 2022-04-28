@@ -33,7 +33,7 @@ jobs:
         with:
           name: ASP-app
           path: '/published/**'
-          app_location: "/" # App source code path
+          app_location: "/src" # App source code path
           output_location: "/src"
 
   deploy:
