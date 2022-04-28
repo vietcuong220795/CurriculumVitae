@@ -33,7 +33,8 @@ jobs:
         with:
           name: ASP-app
           path: '/published/**'
-          output_location: "./src/"
+          app_location: "/" # App source code path
+          output_location: "/src"
 
   deploy:
     runs-on: windows-latest
