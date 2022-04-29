@@ -22,6 +22,9 @@ jobs:
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.5
 
+      - name: Publish to folder
+        run: dotnet publish
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
