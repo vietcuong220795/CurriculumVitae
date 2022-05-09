@@ -14,6 +14,6 @@ jobs:
         server: ftps://waws-prod-hk1-019.ftp.azurewebsites.windows.net/site/wwwroot
         username: 'CurriculumVitae\$CurriculumVitae'
         password: 'i4tNCmguio7TjmpeD1gvyh30LeFknyuS3u16WJyAvYCiaYXegzEv7eomP3k9'
-        local-dir: '/src'
+        local-dir: '/src/'
         protocol: ftps
         port: 990 # todo replace with your web hosts ftps port
