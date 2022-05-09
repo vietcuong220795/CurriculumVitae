@@ -34,10 +34,11 @@ jobs:
       - name: Upload from public_html via FTP
         uses: airvzxf/ftp-deployment-action@latest
         with:
-          server: 'waws-prod-hk1-019.ftp.azurewebsites.windows.net:990'
+          server: '13.75.93.8:990'
           username: '$CurriculumVitae'
           password: 'i4tNCmguio7TjmpeD1gvyh30LeFknyuS3u16WJyAvYCiaYXegzEv7eomP3k9'
           local_dir: './src'
-          delete: "true"
+          delete: 'true'
           trustSSL: "true"
+          protocol: 'ftps'
           INPUT_MAX_RETRIES: 2
