@@ -35,10 +35,9 @@ jobs:
         uses: airvzxf/ftp-deployment-action@latest
         with:
           server: '13.75.93.8:990'
-          username: '$CurriculumVitae'
+          user: '$CurriculumVitae'
           password: 'i4tNCmguio7TjmpeD1gvyh30LeFknyuS3u16WJyAvYCiaYXegzEv7eomP3k9'
           local_dir: './src'
           delete: 'true'
-          trustSSL: "true"
-          protocol: 'ftps'
-          INPUT_MAX_RETRIES: 2
+          ftp_ssl_allow: "true"
+          max_retries: 2
