@@ -13,10 +13,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: airvzxf/ftp-deployment-action@latest
         with:
           server: waws-prod-hk1-019.ftp.azurewebsites.windows.net
           username: 'CurriculumVitae\$CurriculumVitae'
           password: 'i4tNCmguio7TjmpeD1gvyh30LeFknyuS3u16WJyAvYCiaYXegzEv7eomP3k9'
-          protocol: ftps
+          local_dir: "./src"
+          remote_dir: "/wwwroot"
+          delete: "true"
           port: 990 # todo replace with your web hosts ftps port
