@@ -29,7 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       # Here is the deployment action
       - name: Upload from public_html via FTP
         uses: airvzxf/ftp-deployment-action@latest
@@ -38,6 +38,7 @@ jobs:
           user: '$CurriculumVitae'
           password: 'i4tNCmguio7TjmpeD1gvyh30LeFknyuS3u16WJyAvYCiaYXegzEv7eomP3k9'
           local_dir: './src'
+          remote_dir: 'wwwroot'
           delete: 'true'
           ftp_ssl_allow: "true"
           max_retries: 2
