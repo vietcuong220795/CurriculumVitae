@@ -1,24 +1,18 @@
-name: FTPS Test
-
-on:
-  push:
-    branches: [main]
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
-    name: 🚀 Deploy website every commit
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v2
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
 
-      - name: 📂 Sync files
-        uses: airvzxf/ftp-deployment-action@latest
-        with:
-          server: waws-prod-hk1-019.ftp.azurewebsites.windows.net
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+      		server: waws-prod-hk1-019.ftp.azurewebsites.windows.net
           username: 'CurriculumVitae\$CurriculumVitae'
           password: 'i4tNCmguio7TjmpeD1gvyh30LeFknyuS3u16WJyAvYCiaYXegzEv7eomP3k9'
-          local_dir: "./src"
-          remote_dir: "/wwwroot"
-          delete: "true"
+          protocol: ftps
           port: 990 # todo replace with your web hosts ftps port
