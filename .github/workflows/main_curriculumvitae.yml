@@ -15,7 +15,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: 'waws-prod-hk1-019.ftp.azurewebsites.windows.net'
+          server: 'ftps://waws-prod-hk1-019.ftp.azurewebsites.windows.net/site/wwwroot'
           username: 'CurriculumVitae\$CurriculumVitae'
           password: 'i4tNCmguio7TjmpeD1gvyh30LeFknyuS3u16WJyAvYCiaYXegzEv7eomP3k9'
           protocol: ftps
