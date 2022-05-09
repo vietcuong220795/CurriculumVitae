@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 📂 Sync files
-        uses: ./
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ftps://waws-prod-hk1-019.ftp.azurewebsites.windows.net/site/wwwroot
           username: 'CurriculumVitae\$CurriculumVitae'
