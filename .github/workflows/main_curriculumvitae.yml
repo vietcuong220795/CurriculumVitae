@@ -34,10 +34,10 @@ jobs:
       - name: Upload from public_html via FTP
         uses: airvzxf/ftp-deployment-action@latest
         with:
-          server: 'curriculumvitae.scm.azurewebsites.net:443'
+          server: 'curriculumvitae.scm.azurewebsites.net:990'
           username: '$CurriculumVitae'
           password: 'i4tNCmguio7TjmpeD1gvyh30LeFknyuS3u16WJyAvYCiaYXegzEv7eomP3k9'
           local_dir: './src'
           delete: "true"
-          port: "990"
           trustSSL: "true"
+          INPUT_MAX_RETRIES: 2
